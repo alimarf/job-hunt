@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { link } from "fs";
+
 import Image from "next/image";
+import Link from "next/link";
 import React, { FC } from "react";
 
 interface NavbarProps {}
@@ -18,12 +19,12 @@ const Navbar: FC<NavbarProps> = ({}) => {
           />
         </div>
         <div>
-          <span className="mr-4 font-medium text-gray-400 cursor-pointer">
+          <Link href="/find-jobs" className="mr-4 font-medium text-gray-400 cursor-pointer">
             Find Jobs
-          </span>
-          <span className="font-medium text-gray-400 cursor-pointer">
+          </Link>
+          <Link href="/find-companies" className="font-medium text-gray-400 cursor-pointer">
             Browse Companies
-          </span>
+          </Link>
         </div>
       </div>
       <div className="inline-flex items-center h-8 gap-4">
