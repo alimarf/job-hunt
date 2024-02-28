@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@radix-ui/react-separator";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
+import { useRouter } from "next/navigation";
 
 interface JobCardProps extends JobType {}
 
@@ -19,8 +20,9 @@ const JobCard: FC<JobCardProps> = ({
   needs,
   type,
 }) => {
+  const router = useRouter()
   return (
-    <div className="flex flex-row items-center justify-between w-full p-6 mb-5 border border-border">
+    <div onClick={()=> router.push('/detail/job/1')} className="flex flex-row items-center justify-between w-full p-6 mb-5 border border-border">
       <div className="flex flex-row items-start gap-6">
         <div>
           <Image src={image} alt={image} width={64} height={64} />
